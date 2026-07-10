@@ -12,19 +12,32 @@ function Contact() {
         // Replace with your Web3Forms Access Key
         formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
 
-        const response = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            body: formData
-        });
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
 
-        const data = await response.json();
+            // Check if the response is actually JSON before parsing
+            const contentType = response.headers.get("content-type");
+            if (contentType && contentType.indexOf("application/json") !== -1) {
+                const data = await response.json();
 
-        if (data.success) {
-            setResult("Message Sent Successfully!");
-            event.target.reset();
-        } else {
-            console.log("Error", data);
-            setResult(data.message);
+                if (data.success) {
+                    setResult("Message Sent Successfully!");
+                    event.target.reset();
+                } else {
+                    console.log("Error", data);
+                    setResult(data.message);
+                }
+            } else {
+                // If it's not JSON, it's likely an HTML error page (e.g., due to an invalid access key)
+                console.error("Received non-JSON response");
+                setResult("Error: Invalid API Key or Server Error. Please check your Web3Forms Access Key.");
+            }
+        } catch (error) {
+            console.error("Submission error:", error);
+            setResult("An error occurred while sending the message.");
         }
     };
 
