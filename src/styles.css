@@ -1060,4 +1060,8 @@ img {
     .scroll-indicator {
         display: none;
     }
+    
+    .hero-image-wrapper {
+        display: none;
+    }
 }
