@@ -64,7 +64,10 @@ function About() {
             <div className="container grid-2">
                 <div className="about-image-wrap about-image-reveal">
                     <div className="about-image glass-panel tilt-element">
-                        <img src="images/ChatGPT Image Jun 13, 2026, 10_32_47 AM.png" alt="Praveen Workspace" />
+                        <picture>
+                            <source media="(max-width: 768px)" srcSet="images/ChatGPT Image Jun 13, 2026, 10_32_47 AM.png" />
+                            <img src="images/ChatGPT Image May 26, 2026, 02_41_14 PM (2).png" alt="Praveen Workspace" />
+                        </picture>
                         <div className="glow-effect"></div>
                     </div>
                 </div>

@@ -70,12 +70,16 @@ function Hero({ isAppLoaded }) {
                         Bridging the gap between stunning visual design and flawless frontend development to build immersive digital experiences.
                     </p>
                     <div className="hero-cta reveal-text">
-                        <a href="#projects" className="btn-primary magnetic">
+                        <a href="projects" className="btn-primary magnetic">
                             <span className="btn-text">View My Work</span>
                             <i className="ri-arrow-right-up-line"></i>
                         </a>
-                        <a href="#contact" className="btn-secondary magnetic">
+                        <a href="contact" className="btn-secondary magnetic">
                             <span className="btn-text">Contact Me</span>
+                        </a>
+                        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="btn-secondary magnetic" style={{ borderColor: 'var(--primary)', color: 'var(--primary)' }}>
+                            <span className="btn-text">Resume</span>
+                            <i className="ri-file-download-line" style={{ marginLeft: '8px' }}></i>
                         </a>
                     </div>
                 </div>
