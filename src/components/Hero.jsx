@@ -77,7 +77,7 @@ function Hero({ isAppLoaded }) {
                         <a href="contact" className="btn-secondary magnetic">
                             <span className="btn-text">Contact Me</span>
                         </a>
-                        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="btn-secondary magnetic" style={{ borderColor: 'var(--primary)', color: 'var(--primary)' }}>
+                        <a href="/Praveen_Resume_Desginer.pdf" target="_blank" rel="noopener noreferrer" className="btn-secondary magnetic" style={{ borderColor: 'var(--primary)', color: 'var(--primary)' }}>
                             <span className="btn-text">Resume</span>
                             <i className="ri-file-download-line" style={{ marginLeft: '8px' }}></i>
                         </a>
